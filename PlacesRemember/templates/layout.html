@@ -19,9 +19,9 @@
             <div class="header__inner">
                 {% if request.user.is_authenticated %}
                     <div class="header__inner-user">
-                        <img src="" alt="Ваше фото">
-                        <a href="{">
-                            <h2>authorized</h2>
+                        <img src="{{ user_photo }}" alt="Ваше фото">
+                        <a href="{% url 'logout' %}">
+                            <h2>{{ user.last_name }} {{ user.first_name }}</h2> <i class="fa-solid fa-arrow-right-from-bracket fa-xl" style="color: #ffffff;"></i>
                         </a>
                     </div>
                 {% else %}
