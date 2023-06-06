@@ -1,6 +1,5 @@
 from django import forms
 from .models import Impressions
-from widget_tweaks.templatetags.widget_tweaks import register
 from location_field.forms.plain import PlainLocationField
 
 

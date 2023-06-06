@@ -24,12 +24,10 @@ def vk_auth(request):
     photo_url = extra_data.get('photo_max_orig')
 
     data = {
-        'user_name': user_name,
         'user_photo': user_photo,
         'user_info': vk.users.get(user_ids=vk_id, fields='photo,photo_200,first_name,nickname'),
         'first_name': extra_data.get('first_name'),
         'photo_url': photo_url,
-        'name': name,
     }
 
     return render(request, 'impressions_list.html', data)
