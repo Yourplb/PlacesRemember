@@ -2,7 +2,6 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Impressions
-from .forms import ImpressionsForm
 
 
 class ImpressionsCreateViewTest(TestCase):
@@ -55,5 +54,5 @@ class ImpressionsListViewTest(TestCase):
         response = self.client.get(self.url)
 
         self.assertEqual(response.status_code, 200)
-        self.assertQuerysetEqual(response.context['impressions'], ['Test Impressions'], transform=str)
+        self.assertQuerysetEqual(response.context['impressions'], [str(impressions)], transform=str)
         self.assertContains(response, 'Test Impressions')
