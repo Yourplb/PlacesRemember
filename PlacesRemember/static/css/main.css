@@ -116,13 +116,108 @@ a h2:hover {
 
  /* Style impressions list */
 .impressions__inner {
+    margin: 35px auto;
+}
 
+.impressions__inner-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    margin: 0 auto 35px;
+}
+
+.impressions__inner-btn i{
+    padding-right: 10px;
 }
 
 .impressions__inner h2{
-
+    text-align: center;
+    margin: 0 auto 20px;
 }
 
 .impressions__inner-item {
+    margin: 45px auto;
+    background: #3b3b3b;
+    max-width: 60%;
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 0 5px rgba(255,255,255,.6), inset 0 0 5px rgba(255,255,255,1);
+}
 
+.impressions__inner-item img{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.impressions__inner-item h2{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.impressions__inner-item p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+/* REGISTER */
+.impressions-create {
+    min-width: 500px;
+    max-width: 600px;
+    margin: 100px auto 0;
+    text-align: center;
+    font-family: Arial;
+    color: #fff;
+    font-size: 16px;
+    padding: 50px 0 40px;
+    border-radius: 20px;
+    background-color: #3b3b3b;
+}
+
+.impressions-create__title {
+    font-size: 46px;
+}
+.impressions-create form{
+    margin-top: 25px;
+}
+
+.impressions-create form p input {
+    height: 40px;
+    padding: 0 0 0 10px;
+}
+
+.impressions-create form p textarea{
+    padding: 10px 0 0 10px;
+}
+
+.impressions-create form p input,
+.impressions-create form p textarea {
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.impressions-create form p input:focus,
+.impressions-create form p textarea:focus {
+  box-shadow:0 0 20px rgba(255,255,255,.6),inset 0 0 20px rgba(255,255,255,1);
+  border: none
+}
+
+
+.impressions-create__button {
+    width: 220px;
+    margin: 20px 0 0;
+    color: purple;
+    border-radius: 20px;
+    border: none;
+    padding: 7px 14px;
+}
+
+.impressions-create__button:hover {
+    background-color: #000;
+    color: #fff;
 }

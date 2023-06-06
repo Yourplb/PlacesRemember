@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'impressions',
     'social_django',
+    'location_field.apps.DefaultConfig',
+    'widget_tweaks',
+    'django_google_maps',
 ]
 
 MIDDLEWARE = [
@@ -166,3 +169,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'social_django.context_processors.login_redirect',
     'django.contrib.auth.context_processors.auth',
 )
+
+
+# Google api key
+GOOGLE_MAPS_API_KEY = 'AIzaSyDrC43lCAa206cM_EQgJULlffVIVWo9-78'

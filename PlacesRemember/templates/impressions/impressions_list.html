@@ -6,31 +6,23 @@
 
 
 {% block content %}
-    {% if True %}
-        <p>{{ user.name }}</p>
-        <p>{{ user.first_name }}</p>
-        <p>{{ user.last_name }}</p>
-        <p>{{ user_name }}</p>
-        <p>{{ user_photo }}</p>
-        <p>{{ user_info }}
-        <p>{{ name }}</p>
-        <img src="{{ photo_url }}" alt='afs'>
-        <img src="{{ user.social_auth.extra_data.photo }}" alt="Ваша фотография">
-        <p></p>
-
+    {% if impressions %}
         <div class="impressions__inner">
-            <a class="btn btn-warning" href=""><i class="fas fa-plus-circle"></i> Добавить воспоминание</a>
-            <div class="impressions__inner-item">
-
-            </div>
+            <a class="btn btn-warning impressions__inner-btn" href="{% url 'impressions:impressions_create' %}"><i class="fas fa-plus-circle"></i> Добавить воспоминание</a>
+            {% for imp in impressions %}
+                <div class="impressions__inner-item">
+                    <img>{{ imp.location }}</img>
+                    <h2>{{ imp.title }}</h2>
+                    <p>{{ imp.description }}</p>
+                </div>
+            {% endfor %}
         </div>
     {% else %}
         <div class="container">
             <div class="impressions__inner">
                 <h2>У вас нет ни одного воспоминания!!!</h2>
-                <a class="btn btn-warning" href=""><i class="fas fa-plus-circle"></i> Добавить воспоминание</a>
+                <a class="btn btn-warning impressions__inner-btn" href="{% url 'impressions:impressions_create' %}"><i class="fas fa-plus-circle"></i> Добавить воспоминание</a>
             </div>
         </div>
     {% endif %}
-
 {% endblock %}
