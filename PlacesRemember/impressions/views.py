@@ -59,8 +59,8 @@ def impressions_create(request):
     else:
         form = ImpressionsForm()
 
-        data = {
-            'form': form,
-        }
+    data = {
+        'form': form,
+    }
 
     return render(request, 'impressions/impressions_create.html', data)
